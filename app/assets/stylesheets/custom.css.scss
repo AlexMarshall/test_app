@@ -57,10 +57,23 @@ h2 {
   color: $grayLight;
 }
 
+h3 {
+  margin-top: 10px;
+  
+}
+
+h4 {
+  margin-left: 80px;
+  margin-top: 10px;
+  
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+
 
 
 /* header */
@@ -183,6 +196,20 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
   height: auto;
   margin-bottom: 15px;
+  
+  @include box_sizing;
+}
+
+#blah_form input, textarea, b4 {margin-left:80px}
+#blah_loop input {margin-left:80px}
+
+
+textarea {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: 100px;
+  margin-bottom: 15px;
   @include box_sizing;
 }
 
@@ -228,6 +255,7 @@ input, textarea, select, .uneditable-input {
 
 .content {
   display: block;
+  
 }
 
 .timestamp {
@@ -239,4 +267,12 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+/* comments */
+
+
+
+div.box {
+    border: 3px solid black;
 }

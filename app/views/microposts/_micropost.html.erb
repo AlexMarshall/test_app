@@ -9,33 +9,33 @@
                                      title:   micropost.content %>
   <% end %>
 
-  <h2>Comments</h2>
+  <h2>Offers</h2>
   
-    <% micropost.comments.each do |comment| %>
-      <p>
-        <b>Commenter:</b>
-        <%= comment.commenter %>
-      </p>
- 
-      <p>
-        <b>Comment:</b>
-        <%= comment.body %>
-      </p>
+    <% micropost.comments.each, :html => { :id => "blah_loop"}, do |comment| %>
+   
+       <div class="box">
+         <b>Vendor:</b>
+         <%= comment.commenter %><br>
+         <b>Deal:</b>
+         <%= comment.body %>
+       </div>
+
     <% end %>
   
 
-  <h3>Add a comment:</h3>
-  <%= form_for([micropost, micropost.comments.build]) do |f| %>
+  <h4>Suggest an Offer:</h4>
+  <%= form_for([micropost, micropost.comments.build], :html => { :id => "blah_form" }) do |f| %>
+  
     <div class="field">
-      <%= f.label :commenter %><br />
+      <p2>Who are you?</p2>
       <%= f.text_field :commenter %>
     </div>
     <div class="field">
-      <%= f.label :body %><br />
+      <p2>What deal are you offering?</p2>
       <%= f.text_area :body %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Submit"%>
     </div>
   <% end %>
 </li>

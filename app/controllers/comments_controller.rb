@@ -5,8 +5,8 @@ class CommentsController < ApplicationController
     @comment.micropost = @micropost
    
     if @comment.save
-       flash[:success] = "Comment created!"
-       redirect_to current_user
+       flash[:success] = "Offer submited!"
+       redirect_to :back
     else
       render 'shared/_comment_form'
     end
